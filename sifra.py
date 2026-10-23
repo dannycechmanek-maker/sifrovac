@@ -7,8 +7,11 @@ def desifruj(text, posun):
     abeceda = "abcdefghijklmnopqrstuvwxyz"
     vysledek = ""
     for znak in text:
-        pozice = abeceda.index(znak)
-        vysledek = vysledek + abeceda[(pozice - posun) % 26]
+        if znak in abeceda:
+            pozice = abeceda.index(znak)
+            vysledek = vysledek + abeceda[(pozice - posun) % 26]
+        else:
+            vysledek = vysledek + znak
     return vysledek
 
 
