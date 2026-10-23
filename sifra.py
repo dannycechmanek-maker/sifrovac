@@ -1,6 +1,17 @@
 def zasifruj(text, posun):
-    # TODO (A): posuň každé písmeno o 'posun' míst dopředu
-    return text
+    abeceda = "abcdefghijklmnopqrstuvwxyz"
+
+    vysledek = ""
+
+    for znak in text:
+
+        pozice = abeceda.index(znak)
+
+        vysledek = vysledek + abeceda[pozice + posun]
+
+    return vysledek
+ 
+
 
 
 def desifruj(text, posun):
