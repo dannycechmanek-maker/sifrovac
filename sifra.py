@@ -4,8 +4,12 @@ def zasifruj(text, posun):
 
 
 def desifruj(text, posun):
-    # TODO (B): posuň každé písmeno o 'posun' míst dozadu
-    return text
+    abeceda = "abcdefghijklmnopqrstuvwxyz"
+    vysledek = ""
+    for znak in text:
+        pozice = abeceda.index(znak)
+        vysledek = vysledek + abeceda[pozice - posun]
+    return vysledek
 
 
 zprava = "ahoj svete"
